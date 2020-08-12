@@ -1,21 +1,16 @@
-import { AssistantPackage, RuleDefinition } from '@sketch-hq/sketch-assistant-types'
+import { AssistantPackage } from '@sketch-hq/sketch-assistant-types'
 
-const helloWorld: RuleDefinition = {
-  rule: async (context) => {
-    context.utils.report('Hello world')
-  },
-  name: 'sketch-assistant-template/hello-world',
-  title: 'Hello World',
-  description: 'Reports a hello world message',
-}
+import { noDefaultGroups } from './rules/no-default-groups'
+import { noCopyLabels } from './rules/no-copy-labels'
 
 const assistant: AssistantPackage = async () => {
   return {
-    name: 'sketch-assistant-template',
-    rules: [helloWorld],
+    name: 'hds-assistant',
+    rules: [noDefaultGroups, noCopyLabels],
     config: {
       rules: {
-        'sketch-assistant-template/hello-world': { active: true },
+        'hds-assistant/no-default-groups': { active: true },
+        'hds-assistant/no-copy-labels': { active: true },
       },
     },
   }
