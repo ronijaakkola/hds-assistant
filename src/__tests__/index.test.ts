@@ -333,3 +333,96 @@ describe('CORE: name-pattern-shapes', () => {
   })
 })
 
+describe('CORE: groups-no-empty', () => {
+  test('no violations found for no empty groups', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-groups.sketch'),
+      'groups-no-empty',
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: layers-no-hidden', () => {
+  test('no violations found for no hidden layers or groups', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-groups.sketch'),
+      'layers-no-hidden',
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for no hidden layers or groups', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violations-groups.sketch'),
+      'layers-no-hidden',
+    )
+    expect(violations).toHaveLength(2)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: layers-no-loose', () => {
+  test('no violations found for no loose layers', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-no-loose-layers.sketch'),
+      'layers-no-loose',
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for no loose layers', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violations-no-loose-layers.sketch'),
+      'layers-no-loose',
+    )
+    expect(violations).toHaveLength(1)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: groups-no-redundant', () => {
+  test('no violations found for no redundant groups', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-groups.sketch'),
+      'groups-no-redundant',
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for no redundant groups', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violations-groups.sketch'),
+      'groups-no-redundant',
+    )
+    expect(violations).toHaveLength(1)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('HDS: no-groups-with-one-item', () => {
+  test('no violations found for no groups with one item', async () => {
+    const { violations, ruleErrors } = await testRuleInAssistant (
+      resolve(__dirname, './sketch-files/valid-groups.sketch'),
+      Assistant,
+      'hds-assistant/no-groups-with-one-item',
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for no groups with one item', async () => {
+    const { violations, ruleErrors } = await testRuleInAssistant (
+      resolve(__dirname, './sketch-files/violations-groups.sketch'),
+      Assistant,
+      'hds-assistant/no-groups-with-one-item',
+    )
+    expect(violations).toHaveLength(2)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
