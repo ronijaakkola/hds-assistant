@@ -15,6 +15,9 @@ const testCoreRule = async (
     config
   )
 
+/* STYLES */
+/* -------------------------------------------------------------*/
+
 describe('CORE: layer-styles-no-dirty', () => {
   test('no violations for no layers with dirty styles', async () => {
     const { violations, ruleErrors } = await testCoreRule (
@@ -185,6 +188,9 @@ describe('CORE: layer-styles-prefer-shared', () => {
   })
 })
 
+/* LAYOUT */
+/* -------------------------------------------------------------*/
+
 describe('CORE: layers-subpixel-positioning', () => {
   test('no violations found for subpixel positioning', async () => {
     const { violations, ruleErrors } = await testCoreRule (
@@ -198,6 +204,9 @@ describe('CORE: layers-subpixel-positioning', () => {
     expect(violations).toHaveLength(0)
     expect(ruleErrors).toHaveLength(0)
   })
+
+  /* NAMING */
+  /* -------------------------------------------------------------*/
 
   test('finds violations for subpixel positioning', async () => {
     const { violations, ruleErrors } = await testCoreRule (
@@ -332,6 +341,9 @@ describe('CORE: name-pattern-shapes', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 })
+
+/* LAYERS AND GROUPS */
+/* -------------------------------------------------------------*/
 
 describe('CORE: groups-no-empty', () => {
   test('no violations found for no empty groups', async () => {
