@@ -35,12 +35,12 @@ const assistant: AssistantPackage = [
           '@sketch-hq/sketch-core-assistant/library-text-styles-allowed-libraries': {
             active: true,
             libraries: ["HDS Typography"],
-            ruleTitle: 'Styles: Prefer using styles only from HDS Color library'
+            ruleTitle: 'Styles: Prefer using styles only from HDS Typography library'
           },
           '@sketch-hq/sketch-core-assistant/layer-styles-prefer-shared': {
             active: true,
             maxIdentical: 1,
-            ruleTitle: 'Styles: Don’t use local styles. All styles used in HDS components should be found in HDS libraries.'
+            ruleTitle: 'Styles: You have identical non-shared styles. All styles used in HDS components should be found in HDS libraries.'
           },
 
           /* LAYOUT */
