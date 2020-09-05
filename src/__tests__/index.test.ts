@@ -213,3 +213,123 @@ describe('CORE: layers-subpixel-positioning', () => {
   })
 })
 
+describe('CORE: name-pattern-artboards', () => {
+  test('no violations found for artboard naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-naming.sketch'),
+      'name-pattern-artboards',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Artboard', 'Artboard Copy', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for artboard naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violation-naming.sketch'),
+      'name-pattern-artboards',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Artboard', 'Artboard Copy', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(1)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: name-pattern-pages', () => {
+  test('no violations found for page naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-naming.sketch'),
+      'name-pattern-pages',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Page', 'Page Copy', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for page naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violation-naming.sketch'),
+      'name-pattern-pages',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Page', 'Page Copy', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(1)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: name-pattern-groups', () => {
+  test('no violations found for group naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-naming.sketch'),
+      'name-pattern-groups',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Group', 'Group Copy', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for group naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violation-naming.sketch'),
+      'name-pattern-groups',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Group', 'Group Copy', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(2)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: name-pattern-shapes', () => {
+  test('no violations found for shape naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-naming.sketch'),
+      'name-pattern-shapes',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Oval', '^Rectangle', '^Star', '^Triangle', '^Line', '^Polygon', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for shape naming', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violation-naming.sketch'),
+      'name-pattern-shapes',
+      {
+        active: true,
+        allowed: [],
+        forbidden: ['^Oval', '^Rectangle', '^Star', '^Triangle', '^Line', '^Polygon', '[Cc][Oo][Pp][Yy]'],
+      },
+    )
+    expect(violations).toHaveLength(6)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
