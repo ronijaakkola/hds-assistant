@@ -143,7 +143,7 @@ describe('CORE: library-text-styles-allowed-libraries', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 
-  test('finds violations when using not authorized library typography styles', async () => {
+  test('finds violations when using non-authorized library typography styles', async () => {
     const { violations, ruleErrors } = await testCoreRule (
       resolve(__dirname, './sketch-files/violation-non-authorized-library-styles.sketch'),
       'library-text-styles-allowed-libraries',
@@ -171,7 +171,7 @@ describe('CORE: layer-styles-prefer-shared', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 
-  test('finds violations found when using styles that are not shared', async () => {
+  test('finds violations when using styles that are not shared', async () => {
     const { violations, ruleErrors } = await testCoreRule (
       resolve(__dirname, './sketch-files/identical-styles.sketch'),
       'layer-styles-prefer-shared',
@@ -184,3 +184,32 @@ describe('CORE: layer-styles-prefer-shared', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 })
+
+describe('CORE: layers-subpixel-positioning', () => {
+  test('no violations found for subpixel positioning', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-subpixel-positioning.sketch'),
+      'layers-subpixel-positioning',
+      {
+        active: true,
+        scaleFactors: ['@1x'],
+      },
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for subpixel positioning', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violation-subpixel-positioning.sketch'),
+      'layers-subpixel-positioning',
+      {
+        active: true,
+        scaleFactors: ['@1x'],
+      },
+    )
+    expect(violations).toHaveLength(1)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
