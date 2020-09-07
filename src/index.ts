@@ -29,7 +29,7 @@ const assistant: AssistantPackage = [
           },
           '@sketch-hq/sketch-core-assistant/library-layer-styles-allowed-libraries': {
             active: true,
-            libraries: ["HDS Colour"],
+            libraries: ["HDS Color"],
             ruleTitle: 'Styles: Prefer using styles only from HDS Colour library'
           },
           '@sketch-hq/sketch-core-assistant/library-text-styles-allowed-libraries': {
