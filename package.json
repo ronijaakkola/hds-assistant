@@ -2,7 +2,7 @@
   "name": "hds-assistant",
   "homepage": "https://github.com/ronijaakkola/hds-assistant",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "sketch": "dist/sketch.js",
   "sketch-assistant": {
