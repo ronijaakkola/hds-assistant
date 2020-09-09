@@ -17,7 +17,11 @@ const assistant: AssistantPackage = [
           /* -------------------------------------------------------------*/
           '@sketch-hq/sketch-core-assistant/layer-styles-no-dirty': {
             active: true,
-            ruleTitle: 'Styles: Respect the shared styles. Don’t customise or brake the linking to original style.'
+            ruleTitle: 'Styles: Respect the shared layer styles. Don’t customise or brake the linking to original style.'
+          },
+          '@sketch-hq/sketch-core-assistant/text-styles-no-dirty': {
+            active: true,
+            ruleTitle: 'Styles: Respect the shared text styles. Don’t customise or brake the linking to original style.'
           },
           '@sketch-hq/sketch-core-assistant/fills-no-disabled': {
             active: true,
@@ -40,7 +44,12 @@ const assistant: AssistantPackage = [
           '@sketch-hq/sketch-core-assistant/layer-styles-prefer-shared': {
             active: true,
             maxIdentical: 1,
-            ruleTitle: 'Styles: You have identical non-shared styles. All styles used in HDS components should be found in HDS libraries.'
+            ruleTitle: 'Styles: You have identical non-shared layer styles. All styles used in HDS components should be found in HDS libraries.'
+          },
+          '@sketch-hq/sketch-core-assistant/text-styles-prefer-shared': {
+            active: true,
+            maxIdentical: 1,
+            ruleTitle: 'Styles: You have identical non-shared text styles. All typography used in HDS components should be found in HDS libraries.'
           },
 
           /* LAYOUT */
