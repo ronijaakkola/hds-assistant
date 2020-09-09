@@ -19,7 +19,7 @@ const testCoreRule = async (
 /* -------------------------------------------------------------*/
 
 describe('CORE: layer-styles-no-dirty', () => {
-  test('no violations for no layers with dirty styles', async () => {
+  test('no violations for no layers with dirty layer styles', async () => {
     const { violations, ruleErrors } = await testCoreRule (
       resolve(__dirname, './sketch-files/valid-no-dirty-layers.sketch'),
       'layer-styles-no-dirty',
@@ -28,10 +28,30 @@ describe('CORE: layer-styles-no-dirty', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 
-  test('finds violations for no layers with dirty styles', async () => {
+  test('finds violations for no layers with dirty layer styles', async () => {
     const { violations, ruleErrors } = await testCoreRule (
       resolve(__dirname, './sketch-files/violation-no-dirty-layers.sketch'),
       'layer-styles-no-dirty',
+    )
+    expect(violations).toHaveLength(1)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: text-styles-no-dirty', () => {
+  test('no violations for no layers with dirty text styles', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/valid-no-dirty-layers.sketch'),
+      'text-styles-no-dirty',
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations for no layers with dirty text styles', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/violation-no-dirty-layers.sketch'),
+      'text-styles-no-dirty',
     )
     expect(violations).toHaveLength(1)
     expect(ruleErrors).toHaveLength(0)
@@ -78,6 +98,7 @@ describe('CORE: borders-no-disabled', () => {
   })
 })
 
+/*
 describe('CORE: library-layer-styles-allowed-libraries', () => {
   test('no violations found when using correct library styles', async () => {
     const { violations, ruleErrors } = await testCoreRule (
@@ -159,6 +180,7 @@ describe('CORE: library-text-styles-allowed-libraries', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 })
+*/
 
 describe('CORE: layer-styles-prefer-shared', () => {
   test('no violations found for using local layer styles', async () => {
@@ -174,10 +196,38 @@ describe('CORE: layer-styles-prefer-shared', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 
-  test('finds violations when using styles that are not shared', async () => {
+  test('finds violations when using layer styles that are not shared', async () => {
     const { violations, ruleErrors } = await testCoreRule (
       resolve(__dirname, './sketch-files/identical-styles.sketch'),
       'layer-styles-prefer-shared',
+      {
+        active: true,
+        maxIdentical: 1,
+      },
+    )
+    expect(violations).toHaveLength(1)
+    expect(ruleErrors).toHaveLength(0)
+  })
+})
+
+describe('CORE: text-styles-prefer-shared', () => {
+  test('no violations found for using local text styles', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/library-layer-style.sketch'),
+      'text-styles-prefer-shared',
+      {
+        active: true,
+        maxIdentical: 1,
+      },
+    )
+    expect(violations).toHaveLength(0)
+    expect(ruleErrors).toHaveLength(0)
+  })
+
+  test('finds violations when using text styles that are not shared', async () => {
+    const { violations, ruleErrors } = await testCoreRule (
+      resolve(__dirname, './sketch-files/identical-styles.sketch'),
+      'text-styles-prefer-shared',
       {
         active: true,
         maxIdentical: 1,

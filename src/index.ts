@@ -17,7 +17,11 @@ const assistant: AssistantPackage = [
           /* -------------------------------------------------------------*/
           '@sketch-hq/sketch-core-assistant/layer-styles-no-dirty': {
             active: true,
-            ruleTitle: 'Styles: Respect the shared styles. Don’t customise or brake the linking to original style.'
+            ruleTitle: 'Styles: Respect the shared layer styles. Don’t customise or brake the linking to original style.'
+          },
+          '@sketch-hq/sketch-core-assistant/text-styles-no-dirty': {
+            active: true,
+            ruleTitle: 'Styles: Respect the shared text styles. Don’t customise or brake the linking to original style.'
           },
           '@sketch-hq/sketch-core-assistant/fills-no-disabled': {
             active: true,
@@ -27,6 +31,7 @@ const assistant: AssistantPackage = [
             active: true,
             ruleTitle: 'Styles: Remove disabled borders'
           },
+          /* TEMPOARILY DISABLED. THESE DO NOT WORK PROPERLY WITH ABSTRACT!
           '@sketch-hq/sketch-core-assistant/library-layer-styles-allowed-libraries': {
             active: true,
             libraries: ["HDS Color"],
@@ -37,10 +42,16 @@ const assistant: AssistantPackage = [
             libraries: ["HDS Typography"],
             ruleTitle: 'Styles: Prefer using styles only from HDS Typography library'
           },
+          */
           '@sketch-hq/sketch-core-assistant/layer-styles-prefer-shared': {
             active: true,
             maxIdentical: 1,
-            ruleTitle: 'Styles: You have identical non-shared styles. All styles used in HDS components should be found in HDS libraries.'
+            ruleTitle: 'Styles: You have identical non-shared layer styles. All styles used in HDS components should be found in HDS libraries.'
+          },
+          '@sketch-hq/sketch-core-assistant/text-styles-prefer-shared': {
+            active: true,
+            maxIdentical: 1,
+            ruleTitle: 'Styles: You have identical non-shared text styles. All typography used in HDS components should be found in HDS libraries.'
           },
 
           /* LAYOUT */
