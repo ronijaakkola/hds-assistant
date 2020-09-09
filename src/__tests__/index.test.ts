@@ -98,6 +98,7 @@ describe('CORE: borders-no-disabled', () => {
   })
 })
 
+/*
 describe('CORE: library-layer-styles-allowed-libraries', () => {
   test('no violations found when using correct library styles', async () => {
     const { violations, ruleErrors } = await testCoreRule (
@@ -179,6 +180,7 @@ describe('CORE: library-text-styles-allowed-libraries', () => {
     expect(ruleErrors).toHaveLength(0)
   })
 })
+*/
 
 describe('CORE: layer-styles-prefer-shared', () => {
   test('no violations found for using local layer styles', async () => {

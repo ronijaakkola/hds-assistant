@@ -31,6 +31,7 @@ const assistant: AssistantPackage = [
             active: true,
             ruleTitle: 'Styles: Remove disabled borders'
           },
+          /* TEMPOARILY DISABLED. THESE DO NOT WORK PROPERLY WITH ABSTRACT!
           '@sketch-hq/sketch-core-assistant/library-layer-styles-allowed-libraries': {
             active: true,
             libraries: ["HDS Color"],
@@ -41,6 +42,7 @@ const assistant: AssistantPackage = [
             libraries: ["HDS Typography"],
             ruleTitle: 'Styles: Prefer using styles only from HDS Typography library'
           },
+          */
           '@sketch-hq/sketch-core-assistant/layer-styles-prefer-shared': {
             active: true,
             maxIdentical: 1,
