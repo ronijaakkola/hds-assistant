@@ -17,11 +17,11 @@ const assistant: AssistantPackage = [
           /* -------------------------------------------------------------*/
           '@sketch-hq/sketch-core-assistant/layer-styles-no-dirty': {
             active: true,
-            ruleTitle: 'Styles: Respect the shared layer styles. Don’t customise or brake the linking to original style.'
+            ruleTitle: 'Styles: Respect the shared layer styles. Don’t customise or break the linking to original style.'
           },
           '@sketch-hq/sketch-core-assistant/text-styles-no-dirty': {
             active: true,
-            ruleTitle: 'Styles: Respect the shared text styles. Don’t customise or brake the linking to original style.'
+            ruleTitle: 'Styles: Respect the shared text styles. Don’t customise or break the linking to original style.'
           },
           '@sketch-hq/sketch-core-assistant/fills-no-disabled': {
             active: true,
