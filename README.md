@@ -13,10 +13,8 @@
 
 <div align="center">
   <!-- HDS Tool -->
-  <a href="hds.hel.fi">
-    <img src="https://img.shields.io/badge/HDS-tool-blue?style=flat-square"
-      alt="HDS Tool badge" />
-  </a>
+  <img src="https://img.shields.io/badge/HDS-tool-blue?style=flat-square"
+  alt="HDS Tool badge" />
   <!-- Version -->
   <a href="https://github.com/ronijaakkola/hds-assistant/releases/latest">
     <img src="https://img.shields.io/github/v/release/ronijaakkola/hds-assistant?style=flat-square"
