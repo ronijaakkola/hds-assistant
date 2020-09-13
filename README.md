@@ -53,7 +53,33 @@ Currently Sketch does not update assistants automatically. The only way to updat
 #### Styles
 <p>
 <span>:white_check_mark:</span> Respect the shared layer styles. Don’t customise or break the linking to original style. <br />
-<span>:white_check_mark:</span> Respect the shared text styles. Don’t customise or break the linking to original style.
+<span>:white_check_mark:</span> Respect the shared text styles. Don’t customise or break the linking to original style. <br />
+<span>:white_check_mark:</span> Remove disabled fills. <br />
+<span>:white_check_mark:</span> Remove disabled borders. <br />
+<span>:white_check_mark:</span> You have identical non-shared layer styles. All styles used in HDS components should be found in HDS libraries. <br />
+<span>:white_check_mark:</span> You have identical non-shared text styles. All typography used in HDS components should be found in HDS libraries. <br />
+<p>
+
+#### Layout
+<p>
+<span>:white_check_mark:</span> Align elements and artboards to pixel grid. <br />
+<p>
+
+#### Naming
+<p>
+<span>:white_check_mark:</span> Give artboards names that state their purpose or content. <br />
+<span>:white_check_mark:</span> Give pages names that state their purpose or content. <br />
+<span>:white_check_mark:</span> Give groups names that state their purpose or content. <br />
+<span>:white_check_mark:</span> Give shapes names that state their purpose or content. <br />
+<span>:white_check_mark:</span> Give symbols names that state their purpose or content. Use forward slash separator. <br />
+<p>
+
+#### Layers and groups
+<p>
+<span>:white_check_mark:</span> Delete empty groups. <br />
+<span>:white_check_mark:</span> Delete hidden groups and layers. <br />
+<span>:white_check_mark:</span> Ungroup unnecessary groups. <br />
+<span>:white_check_mark:</span> Avoid groups that have only one another group in them. <br />
 <p>
 
 ### Development
