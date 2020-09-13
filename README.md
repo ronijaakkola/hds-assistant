@@ -11,8 +11,6 @@
   <img src="./img/readme-image.png" alt="Helsinki Design System Assistant for Sketch" width="738">
 </p>
 
-<br />
-
 <div align="center">
   <!-- HDS Tool -->
   <a href="hds.hel.fi">
