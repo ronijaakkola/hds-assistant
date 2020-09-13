@@ -50,7 +50,11 @@ Currently Sketch does not update assistants automatically. The only way to updat
 
 ### Rules
 
-TODO
+#### Styles
+<p>
+<span>:white_check_mark:</span> Respect the shared layer styles. Don’t customise or break the linking to original style.
+<span>:white_check_mark:</span> Respect the shared text styles. Don’t customise or break the linking to original style.
+<p>
 
 ### Development
 
