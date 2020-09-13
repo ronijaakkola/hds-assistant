@@ -52,36 +52,49 @@ Currently Sketch does not update assistants automatically. The only way to updat
 
 #### Styles
 <p>
-<span>:heavy_check_mark:</span> Respect the shared layer styles. Don’t customise or break the linking to original style. <br />
-<span>:heavy_check_mark:</span> Respect the shared text styles. Don’t customise or break the linking to original style. <br />
-<span>:heavy_check_mark:</span> Remove disabled fills. <br />
-<span>:heavy_check_mark:</span> Remove disabled borders. <br />
-<span>:heavy_check_mark:</span> You have identical non-shared layer styles. All styles used in HDS components should be found in HDS libraries. <br />
-<span>:heavy_check_mark:</span> You have identical non-shared text styles. All typography used in HDS components should be found in HDS libraries. <br />
+<span>:heavy_check_mark: </span> Respect the shared layer styles. Don’t customise or break the linking to original style. <br />
+<span>:heavy_check_mark: </span> Respect the shared text styles. Don’t customise or break the linking to original style. <br />
+<span>:heavy_check_mark: </span> Remove disabled fills. <br />
+<span>:heavy_check_mark: </span> Remove disabled borders. <br />
+<span>:heavy_check_mark: </span> You have identical non-shared layer styles. All styles used in HDS components should be found in HDS libraries. <br />
+<span>:heavy_check_mark: </span> You have identical non-shared text styles. All typography used in HDS components should be found in HDS libraries. <br />
 <p>
 
 #### Layout
 <p>
-<span>:heavy_check_mark:</span> Align elements and artboards to pixel grid. <br />
+<span>:heavy_check_mark: </span> Align elements and artboards to pixel grid. <br />
 <p>
 
 #### Naming
 <p>
-<span>:heavy_check_mark:</span> Give artboards names that state their purpose or content. <br />
-<span>:heavy_check_mark:</span> Give pages names that state their purpose or content. <br />
-<span>:heavy_check_mark:</span> Give groups names that state their purpose or content. <br />
-<span>:heavy_check_mark:</span> Give shapes names that state their purpose or content. <br />
-<span>:heavy_check_mark:</span> Give symbols names that state their purpose or content. Use forward slash separator. <br />
+<span>:heavy_check_mark: </span> Give artboards names that state their purpose or content. <br />
+<span>:heavy_check_mark: </span> Give pages names that state their purpose or content. <br />
+<span>:heavy_check_mark: </span> Give groups names that state their purpose or content. <br />
+<span>:heavy_check_mark: </span> Give shapes names that state their purpose or content. <br />
+<span>:heavy_check_mark: </span> Give symbols names that state their purpose or content. Use forward slash separator. <br />
 <p>
 
 #### Layers and groups
 <p>
-<span>:heavy_check_mark:</span> Delete empty groups. <br />
-<span>:heavy_check_mark:</span> Delete hidden groups and layers. <br />
-<span>:heavy_check_mark:</span> Ungroup unnecessary groups. <br />
-<span>:heavy_check_mark:</span> Avoid groups that have only one another group in them. <br />
+<span>:heavy_check_mark: </span> Delete empty groups. <br />
+<span>:heavy_check_mark: </span> Delete hidden groups and layers. <br />
+<span>:heavy_check_mark: </span> Ungroup unnecessary groups. <br />
+<span>:heavy_check_mark: </span> Avoid groups that have only one another group in them. <br />
 <p>
 
 ### Development
 
-TODO
+#### Setting up
+1. Install Node.js. You need at least version 12 or greater.
+2. Clone this repository.
+3. Go to the project root and run `npm install` to install dependencies.
+4. To build assistant package, run `npm run package-tarball`.
+5. There is now a file called `hds-assistant-<version>.tgz` in the project root folder.
+
+#### Running tests
+In the project root folder, run `npm test`. This will run the test set and show you the results.
+
+#### Adding new rules
+Follow instructions in [Sketch Assistant documentation](https://developer.sketch.com/assistants/write-a-rule). Remember also to add tests to your new rule. Tests are added to `index.test.ts` file in the `__tests__/` folder.
+
+
