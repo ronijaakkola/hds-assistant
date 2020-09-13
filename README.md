@@ -11,6 +11,31 @@
   <img src="./img/readme-image.png" alt="Helsinki Design System Assistant for Sketch" width="738">
 </p>
 
+<br />
+
+<div align="center">
+  <!-- HDS Tool -->
+  <a href="hds.hel.fi">
+    <img src="https://img.shields.io/badge/HDS-tool-blue?style=flat-square"
+      alt="HDS Tool badge" />
+  </a>
+  <!-- Version -->
+  <a href="https://github.com/ronijaakkola/hds-assistant/releases/latest">
+    <img src="https://img.shields.io/github/v/release/ronijaakkola/hds-assistant?style=flat-square"
+      alt="Version" />
+  </a>
+   <!-- Licence -->
+  <a href="https://github.com/ronijaakkola/hds-assistant/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/github/license/ronijaakkola/hds-assistant?style=flat-square"
+      alt="Licence (MIT)" />
+  </a>
+  <!-- Downloads -->
+  <a href="https://github.com/ronijaakkola/hds-assistant/releases/latest">
+    <img src="https://img.shields.io/github/downloads/ronijaakkola/hds-assistant/total?style=flat-square"
+      alt="Downloads" />
+  </a>
+</div>
+
 <div align="center">
   <h4>
     <a href="hds.hel.fi">
