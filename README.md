@@ -1,16 +1,44 @@
-# sketch-assistant-template
+<h1 align="center">HDS Assistant</h1>
 
-> 💁‍♀️ This repository contains a starter project for developing a new Assistant.
+<div align="center">
+  <strong>Sketch Assistant for Helsinki Design System team</strong>
+</div>
+<div align="center">
+  Keeps our Sketch files consistent and tidy
+</div>
 
-👉
-[Click here to generate a new project using this repository as a template](https://github.com/sketch-hq/sketch-assistant-template/generate)
+<p align="center">
+  <img src="./img/readme-image.png" alt="Helsinki Design System Assistant for Sketch" width="738">
+</p>
 
-## Getting started
+<div align="center">
+  <h3>
+    <a href="hds.hel.fi">
+      HDS website
+    </a>
+    <span> | </span>
+    <a href="hds.hel.fi">
+      HDS Sketch guidelines
+    </a>
+    <span> | </span>
+    <a href="https://github.com/YerkoPalma/awesome-choo">
+      Contributing
+    </a>
+    <span> | </span>
+    <a href="https://developer.sketch.com/assistants/">
+      Sketch Assistant docs
+    </a>
+  </h3>
+</div>
 
-For in-depth guides head over to the [Sketch Developer](https://developer.sketch.com/assistants/)
-site.
+### Features
 
-- [Getting started](https://developer.sketch.com/assistants/getting-started)
-- [Writing a rule](https://developer.sketch.com/assistants/writing-a-rule)
-- [Publishing](https://developer.sketch.com/assistants/publishing)
-- And more!
+TODO
+
+### Usage
+
+TODO
+
+### Development
+
+TODO
