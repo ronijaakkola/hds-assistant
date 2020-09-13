@@ -44,7 +44,7 @@
       HDS Sketch guidelines
     </a>
     <span> | </span>
-    <a href="https://github.com/YerkoPalma/awesome-choo">
+    <a href="https://github.com/ronijaakkola/hds-assistant/blob/main/CONTRIBUTING.md">
       Contributing
     </a>
     <span> | </span>
