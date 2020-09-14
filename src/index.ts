@@ -59,7 +59,7 @@ const assistant: AssistantPackage = [
           '@sketch-hq/sketch-core-assistant/layers-subpixel-positioning': {
             active: true,
             scaleFactors: ['@1x'],
-            ruleTitle: 'Align elements and artboards to pixel grid'
+            ruleTitle: 'Layout: Align elements and artboards to pixel grid'
           },
           // TODO: Check usage of HDS Spacing tokens
 
